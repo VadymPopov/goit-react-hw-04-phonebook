@@ -8,18 +8,16 @@ import useLocalStorage from "hooks/useLocalStorage";
 
 const KEY = 'contacts';
 
-
-
 const App = () => {
 
   const [contacts, setContacts] = useLocalStorage(KEY,[]);
   const [filter, setFilter] = useState("");
 
+  // without useLocalStorage hook
   // const [contacts, setContacts] =useState(()=>{
   //   return JSON.parse(window.localStorage.getItem(KEY)) ?? []
   // });
   // const [filter, setFilter] =useState("");
-
 
   // useEffect(()=>{
   //   window.localStorage.setItem(KEY,JSON.stringify(contacts));
